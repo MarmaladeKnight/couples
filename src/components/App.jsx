@@ -1,13 +1,11 @@
 import React, {Component} from 'react'
-import Card from './Card/Card.js'
+import Area from './Area/Area.jsx'
 
 class App extends Component {
 
     render() {
         return (
-            <div>
-            <Card />
-            </div>
+            <Area />
         )
     }
 }
