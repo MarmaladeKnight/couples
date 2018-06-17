@@ -23,8 +23,8 @@ class Card extends Component {
     handleSelected =() => {
         if(!this.state.selected && !this.props.disable)
         {
-            this.setState({ selected: true });
-            this.props.counter(this.props.id, this.props.wordEl.word);
+            this.setState({ selected: true }, () => {this.props.counter(this.props.id, this.props.wordEl.word)});
+            //this.props.counter(this.props.id, this.props.wordEl.word);
         }
     }
 

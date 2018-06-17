@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Card from './Card/Card.jsx'
+import { setTimeout } from 'timers';
 
 class CardList extends Component {
     constructor(props) {
@@ -8,21 +9,34 @@ class CardList extends Component {
     }
 
     selectionCount = (id, word) => {
-        if(this.state.counter < 1){
+        if(this.state.counter < 2){
             this.setState((prevState) => ({ counter: prevState.counter + 1,
                                             ids: prevState.ids.concat(id),
-                                            words: prevState.words.concat(word)}));
-        }
-        else
-        {
-            this.setState({ disable: true });
+                                            words: prevState.words.concat(word)}),
+                            () => {
+                                if(this.state.counter >= 2)
+                                {
+                                    this.setState({ disable: true }, () => {this.checkingAnswer();});
+                                }
+                            });
         }
     }
 
+    checkingAnswer = () => {
+        if(this.state.words[0] === this.state.words[1]){
+            setTimeout("alert('OK')", 500);
+        }
+        else{
+            alert("False");
+        }
+    }
+
+    /*
     shouldComponentUpdate(nextState){
         return this.state.ids !== nextState.ids;
     }
 
+    
     componentDidUpdate(){
         if(this.state.words.length == 2 && this.state.words[1] !== 'undefined'){
             if(this.state.words[0] === this.state.words[1]){
@@ -38,20 +52,6 @@ class CardList extends Component {
         }
         else{
             alert(this.state.words.length);
-        }
-    }
-
-    /*
-    checkingAnswer = () => {
-        if(this.state.words[0] === this.state.words[1]){
-            alert("OK");
-            alert(this.state.words[0]);
-            alert(this.state.words[1]);
-        }
-        else{
-            alert("False");
-            alert(this.state.words[0]);
-            alert(this.state.words[1]);
         }
     }
 */
