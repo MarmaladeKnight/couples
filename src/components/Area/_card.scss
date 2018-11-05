@@ -1,0 +1,11 @@
+$size: calc(100%/4 - 30px);
+
+.card {
+    width: $size;
+    height: $size;
+    margin: 10px;
+    //padding-top: 100%;
+    position: block;
+    transform-style: preserve-3d;
+    color:white;
+}

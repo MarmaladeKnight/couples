@@ -1,0 +1,16 @@
+@import 'src/components/body.scss';
+
+.table {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    //align-items: center;
+    height: 100vh;
+    transition: 1s;
+    //\transform: rotateX(45deg);
+    transform-style: preserve-3d;
+    
+}

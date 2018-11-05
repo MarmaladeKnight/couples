@@ -1,4 +1,15 @@
 .area {
-    width: 100%;
+    width: 80%;
+    margin: auto;
     perspective: 1000px;
+    background:
+    repeating-linear-gradient(
+        transparent,transparent 20px, #598A96 22px
+        ),
+    repeating-linear-gradient(
+        90deg,
+        transparent,transparent 20px, #598A96 22px
+        );
+    transition: 1s;
+    //transform: rotateX(45deg);
 }
