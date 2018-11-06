@@ -9,7 +9,14 @@ import  './_card.scss'
 const GameCard = posed.div({
     default: { rotateY: 0, translateZ: 0 },
     hovered: { translateZ: 15 },
-    selected: { rotateY: 180, translateZ: 0 }
+    selected: { 
+        rotateY: 180, 
+        translateZ: 0,
+        transition: {
+            duration: 200,
+            ease: 'backInOut'
+          }
+    },
 });
 
 class Card extends Component {

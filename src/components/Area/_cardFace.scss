@@ -1,14 +1,15 @@
 .CardFace {
     position: absolute;
-    width: 100%;
-    height: 100%;
     left: 0;
     top: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 1s;
     border-radius: 10px;
-    background-color: #BDBDBD;
+    background-color: #c6f1e7;
     transform: rotateY(180deg);
+    color: #333;
 }

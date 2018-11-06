@@ -4,11 +4,11 @@ import './_cardFace.scss'
 
 const CardFace = ({ wordEl }) => (
     <div className="CardFace">
-        <ul>
-            <li>{ wordEl.word }</li>
-            <li>{ wordEl.transcription }</li>
-            <li>{ wordEl.translation }</li>
-        </ul>
+        <p>
+            { wordEl.word }<br/>
+            { wordEl.transcription }<br/>
+            { wordEl.translation }
+        </p>
     </div>
 )
 
