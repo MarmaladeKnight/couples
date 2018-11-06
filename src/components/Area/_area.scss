@@ -1,4 +1,7 @@
 .area {
-    width: 100%;
+    width: 80%;
+    margin: auto;
     perspective: 1000px;
+    transition: 1s;
+    //transform: rotateX(45deg);
 }

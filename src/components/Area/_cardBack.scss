@@ -1,4 +1,4 @@
-.CardFace {
+.CardBack{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -9,6 +9,6 @@
     align-items: center;
     transition: 1s;
     border-radius: 10px;
-    background-color: #BDBDBD;
-    transform: rotateY(180deg);
+    background-color: #fa4659;
+    backface-visibility: hidden;
 }

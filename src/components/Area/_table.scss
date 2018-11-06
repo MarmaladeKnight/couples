@@ -1,0 +1,23 @@
+@import 'src/components/body.scss';
+
+.table {
+    width: 90vh;
+    height: 90vh;
+    margin: auto;
+    padding: 5vh;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 20px;
+    transform: rotateX(45deg);
+    transform-style: preserve-3d;
+    transition: 1s;
+    background:
+    repeating-linear-gradient(
+        transparent,transparent 20px, #ff7100 22px
+        ),
+    repeating-linear-gradient(
+        90deg,
+        transparent,transparent 20px, #ff7100 22px
+        );
+}
