@@ -11,5 +11,9 @@
     border-radius: 10px;
     background-color: #c6f1e7;
     transform: rotateY(180deg);
-    color: #333;
+
+    p {
+        color: #333;
+        user-select: none;
+    }
 }

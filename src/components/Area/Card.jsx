@@ -13,7 +13,7 @@ const GameCard = posed.div({
         rotateY: 180, 
         translateZ: 0,
         transition: {
-            duration: 200,
+            duration: 300,
             ease: 'backInOut'
           }
     },
