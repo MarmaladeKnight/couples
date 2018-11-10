@@ -7,7 +7,7 @@ class Area extends Component {
     render() {
         return (
             <div className="area">
-                <CardList />
+                <CardList/>
             </div>
         )
     }

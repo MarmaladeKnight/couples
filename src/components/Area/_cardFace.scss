@@ -9,11 +9,16 @@
     align-items: center;
     transition: 1s;
     border-radius: 10px;
-    background-color: #c6f1e7;
+    border: 1px solid rgb(156, 156, 156);
+    background-color: #fff;
     transform: rotateY(180deg);
+    overflow: hidden;
 
     p {
         color: #333;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        font-size: 18px;
         user-select: none;
     }
 }

@@ -3,32 +3,34 @@ import { combineReducers } from 'redux'
 const initialState = {
     cardStates: {
         selected: [],
-        answered: []
+        answered: [],
+        pulse: undefined
     },
-    gameStates: [
-        "not kek"
-    ]
+    gameStates: {
+        score: 0
+    }
 }
 
 function gameStates(state = initialState.gameStates, action) {
     switch (action.type) {
-        case 'CHECKING_ANSWER':
+        case 'START_GAME':
             return {
                 ...state,
                 gameStates: [...state.gameStates, action.payload]
             };
-        // case 'CORRECT_ANSWER':
-        //     return {
-        //         ...state,
-        //         gameStates: [...state.gameStates, action.payload]
-        //     };
-        // case 'WRONG_ANSWER':
-        //     return {
-        //         ...state,
-        //         gameStates: [...state.gameStates, action.payload]
-        //     };
+        case 'UP_SCORE':
+            return {
+                ...state,
+                score: state.score + 1
+            };
+        case 'END_GAME':
+            return {
+                ...state,
+                gameStates: {
+                    score: state.gameStates.score + 1
+                }
+            };
         default:
-            // /console.log("lel")
             return state;
     }
 }
@@ -38,21 +40,29 @@ function gameStates(state = initialState.gameStates, action) {
         case 'SELECTED':
             return {
                 ...state,
-                selected: [...state.selected, action.payload],
-                answered: [...state.answered]
+                selected: [...state.selected, action.payload]
             };
         case 'CORRECT_ANSWER':
             return {
                 ...state,
                 selected: [],
-                answered: [...state.answered, ...state.selected]
+                answered: [...state.answered, ...state.selected],
             };
         case 'WRONG_ANSWER':
             return {
                 ...state,
                 selected: [],
-                answered: [...state.answered]
             };
+        case 'PULSE':
+            return {
+                ...state,
+                pulse: action.payload
+            }
+        case 'STOP_PULSE':
+            return {
+                ...state,
+                pulse: undefined
+            }
         default:
             return state;
     }

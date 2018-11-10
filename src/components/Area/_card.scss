@@ -1,20 +1,7 @@
 $size: calc(100%/4 - 30px);
 
 .card {
-    // display: block;
-    // margin: 10px;
-    // flex: 1 calc(100%/4 - 30px);
-    //width: 150px;
-    //height: $size;
-    //padding-top: 100%;
     transform-style: preserve-3d;
     color:white;
     text-align: center;
 }
-/*
-.card:before {
-    content: "";
-    display: block;
-    padding-top: 100%;
-}
-*/
