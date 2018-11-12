@@ -1,6 +1,14 @@
 import { combineReducers } from 'redux'
+import io from 'socket.io-client';
+
+const socket = io('http://localhost:2000');
+
+socket.on('new_user', function(msg){
+    console.log("yey");
+});
 
 const initialState = {
+    socket,
     cardStates: {
         selected: [],
         answered: [],
